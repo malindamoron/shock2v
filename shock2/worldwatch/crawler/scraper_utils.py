@@ -515,9 +515,9 @@ class ContentAnalyzer:
             analysis['word_count'] = len(content.split())
             analysis['char_count'] = len(content)
             analysis['sentence_count'] = len(re.split(r'[.!?]+', content))
-            analysis['paragraph_count'] = len(content.split('\n\n')
-
-                        # Readability metrics
+            analysis['paragraph_count'] = len(content.split('\n\n'))
+            
+            # Readability metrics
             try:
                 analysis['flesch_reading_ease'] = flesch_reading_ease(content)
                 analysis['readability_grade'] = self._calculate_readability_grade(content)
